@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+    
+}
+*/
+
+@layer utilities {
+    .bg {
+        background-image: url('../assets/image/hero.webp');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        
+    }
+    .about_bg {
+        background-image: url('../assets/image/Moynul.png');
+        background-size: cover;
+        background-position: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        
+        
+    }
+
+    .box_shadow {
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0,0.15), -6px 6px 10px -1px rgba(255, 255, 255, 0.7);
+    }
+    .box_shadow_inner {
+        box-shadow:inset 4px 4px 6px -1px rgba(0, 0, 0,0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    }
+    .skill_shadow_inner2 {
+        box-shadow:inset 4px 4px 6px -1px rgba(0, 0, 0,0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.2), -0.5px -0.5px 0px rgba(255, 255, 255, 0.5), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    }
+    circle{
+        fill: none;
+        stroke: #fff;
+        stroke-width: 4px;
+        stroke-dasharray: 472;
+        stroke-dashoffset: 472;
+        
+    }
+    .growth .python circle{
+        animation: python 2s linear forwards;
+    }
+    .growth .django circle{
+        animation: django 2s linear forwards;
+    }
+    .growth .javascript circle{
+        animation: javascript 2s linear forwards;
+    }
+    .growth .php circle{
+        animation: php 2s linear forwards;
+    }
+
+    @keyframes python {
+        100%{
+            stroke-dashoffset: 345;
+        }
+    }
+    @keyframes django {
+        100%{
+            stroke-dashoffset: 330;
+        }
+    }
+    @keyframes javascript {
+        100%{
+            stroke-dashoffset: 375;
+        }
+    }
+    @keyframes php {
+        100%{
+            stroke-dashoffset: 386;
+        }
+    }
+
+
+}
+
+@layer components {
+    .flex_all_center{
+        @apply flex justify-center items-center
+    }
+    section{
+        @apply h-full w-screen 
+    }
+
+    .side_nav:hover i{
+        @apply text-white
+    }
+
+    .growth{
+        @apply h-20 w-14   
+    }
+    .growth .skill{
+        @apply h-14 w-14 p-3 flex flex-col backdrop-blur-2xl rounded-full bg-body2 box_shadow skill_shadow_inner2
+    }
+    .growth .javascript, .php, .python, .django {
+        @apply w-full h-full flex_all_center font-semibold text-sm
+    }
+
+    .button {
+    @apply w-28 md:w-48 py-2 md:py-3 text-sm md:text-[16px] flex_all_center font-semibold text-caribbean-current hover:bg-gray-300 box_shadow box_shadow_inner bg-sidenav_bg rounded-lg
+    }
+}
+
+
+
+/* ........................Header.............................. */
+.header {
+    @apply h-screen w-12 md:h-16 md:w-screen flex_all_center top-0 fixed z-50
+}
+
+.top_navbar_style {
+    @apply h-full w-full flex flex_all_center gap-7
+}
+.side_navbar_style {
+    @apply w-8 flex_all_center flex-col gap-0 font-bold rounded-[15px] bg-sidenav_bg border-[1px] border-sidenav_bg overflow-hidden shadow-2xl shadow-caribbean-current md:hidden  
+}
+.side_nav {
+    @apply w-full h-12 flex_all_center rounded-xl md:hidden hover:bg-caribbean-current
+}
+.side_nav i{
+    @apply text-lg text-icon
+}
+.top_nav {
+    @apply text-icon font-bold hover:text-white hidden md:block
+} 
+
+
+
+/* ..........................Home............................ */
+.social_links a i{
+    @apply text-white-smoke font-thin
+}
+.social_links a:hover i{
+    @apply text-white
+}
